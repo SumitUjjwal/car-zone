@@ -1,0 +1,265 @@
+main {
+       width: 80%;
+       /* border: 1px solid red; */
+       margin: auto;
+}
+
+.top_main_img {
+       padding: 30px 0px;
+}
+
+#top_main_display {
+       display: flex;
+       justify-content: space-between;
+}
+
+#top_main_display>div {
+       /* border: 1px solid red; */
+       width: 49.5%;
+}
+
+
+/* carousel */
+
+/* Slideshow container */
+.slideshow-container {
+       max-width: 1000px;
+       position: relative;
+       margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+       display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+       cursor: pointer;
+       position: absolute;
+       top: 50%;
+       width: auto;
+       margin-top: -22px;
+       padding: 16px;
+       color: white;
+       font-weight: bold;
+       font-size: 18px;
+       transition: 0.6s ease;
+       border-radius: 0 3px 3px 0;
+       user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+       right: 0;
+       border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+       background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+#top_main_display>:nth-child(2)>div {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       height: 30%;
+       border: 2px solid #C4C4C4;
+       width: 94%;
+       margin: auto;
+       padding: 0px 20px;
+}
+
+#top_main_display>:nth-child(2) {
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+}
+
+#top_main_display>:nth-child(2)>div>:nth-child(3)>img {
+       width: 70%;
+}
+
+#top_main_display>:nth-child(2)>div>:nth-child(2) {
+       text-align: left;
+       width: 70%;
+}
+
+#top_main_display>:nth-child(2)>div>:nth-child(2)>h3 {
+       font-size: 28px;
+       font-weight: 700;
+       line-height: 30px;
+}
+
+#top_main_display>:nth-child(2)>div>:nth-child(2)>p {
+       font-size: 20px;
+       font-weight: 400;
+       line-height: 25px;
+}
+
+
+/* top-bottom carousel */
+.heading_h1{
+       font-size: 35px;
+       font-weight: 700;
+       text-decoration: underline;
+       text-decoration-color: #F26100;
+       margin: 30px 0px;
+}
+
+.bottom_carousel_right_section {
+       width: 99%;
+       display: flex;
+       margin: auto;
+       /* background: #000; */
+}
+
+.bottom_carousel_display_container {
+       width: 100%;
+       padding: 20px 0;
+       /* border: 1px solid red; */
+       overflow: hidden;
+}
+
+.bottom_carousel_cards_track {
+       width: 100%;
+       display: flex;
+       transition-duration: 500ms;
+       /* border: 1px solid red; */
+}
+
+.bottom_carousel_card {
+       width: 15%;
+       min-width: 15%;
+       display: flex;
+       flex-direction: column;
+       background: white;
+       padding: 10px;
+       border-radius: 4px;
+       margin: 0 10px;
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.bottom_carousel_card>div>img {
+       width: 80%;
+}
+
+.bottom_carousel_card>span:nth-child(2) {
+       font-size: 13px;
+       /* color: #0046be; */
+       line-height: 17px;
+       margin-top: 10px;
+}
+
+.bottom_carousel_card>span:nth-child(3)>img {
+       width: 40%;
+       margin: 10px 0;
+}
+
+.bottom_carousel_card>span:nth-child(3) {
+       display: flex;
+       align-items: center;
+       /* color: #0046be; */
+       font-size: 13px;
+}
+
+.bottom_carousel_card>span:nth-child(4) {
+       color: #040c13;
+       font-size: 15px;
+       font-weight: 500;
+       line-height: 18px;
+}
+
+.bottom_carousel_card>span:nth-child(5) {
+       color: #040c13;
+       font-size: 15px;
+       font-weight: 500;
+       line-height: 18px;
+       text-decoration: line-through;
+       font-weight: 400;
+}
+
+.bottom_carousel_prev_button {
+       width: 3%;
+       /* background: #000; */
+       display: flex;
+       align-items: center;
+       /* justify-content: center; */
+}
+
+.bottom_carousel_prev_button>span {
+       font-size: 50px;
+       color: rgb(179, 179, 179);
+       cursor: pointer;
+}
+
+.bottom_carousel_next_button {
+       width: 3%;
+       /* background: #000; */
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding-left: 10px;
+}
+
+.bottom_carousel_next_button>span {
+       font-size: 50px;
+       color: rgb(179, 179, 179);
+       cursor: pointer;
+}
+/* mid_main */
+
+#mid_main_features{
+       display: flex;
+       justify-content: space-around;
+       margin: 50px auto;
+       /* border: 1px solid red; */
+}
+
+#mid_main_features>div{
+       display: flex;
+       /* justify-content: space-around; */
+       gap: 20px;
+       align-items: center;
+       border: 2px solid #C4C4C4;
+       width: 28%;
+       line-height: 30px;
+       padding: 10px 20px;
+}
+
+#mid_main_features>div img{
+       width: 50px;
+}
+
+.mid_top_deals_1{
+       display: flex;
+       justify-content: space-between;
+       margin: 60px auto;
+}
+
+.mid_featured_categories{
+       width: 100%;
+       display: grid;
+       grid-template-columns: repeat(4,1fr);
+       column-gap: 0px;
+       /* row-gap: 30px; */
+       margin: 50px auto;
+}
+
+.mid_featured_categories>div{
+       margin: auto ;
+       border: 1px solid #C4C4C4;
+       text-align: center;
+       padding: 20px 40px;
+       width: 78%;
+}
+
+.mid_featured_categories>div:hover{
+       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       transition-duration: 300ms;
+       cursor: pointer;
+}

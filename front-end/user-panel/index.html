@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>CarZone - Home Page</title>
+       <!-- stylesheet -->
+       <link rel="stylesheet" href="./style/utility.css">
+       <link rel="stylesheet" href="./style/nav.css">
+       <link rel="stylesheet" href="./style/index.css">
+
+       <!--material icon  -->
+       <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+       <!-- nav -->
+       <nav>
+              <div id="nav">
+                     <div id="nav_left">
+                            <div id="nav_menu" onclick="openNav()">
+                                   <span id="nav_icon" class="material-symbols-outlined">
+                                          menu
+                                   </span>
+                                   <p>Menu</p>
+                            </div>
+                            <div id="mySidenav" class="sidenav">
+                                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                   <h3>Most Popular</h3>
+                                   <ul>
+                                          <li>Batteries</li>
+                                          <li>Engine Oil</li>
+                                          <li>Brake Rotors</li>
+                                          <li>Brake Pads</li>
+                                          <li>Oil Filter</li>
+                                          <li>Air Filter</li>
+                                   </ul>
+                                   <hr>
+                                   <h3>Shop All</h3>
+                                   <ul>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/parts.svg" alt="">Auto Parts</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/interior.svg" alt="">Interior Accessories</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/exterior.svg" alt="">Exterior Accessories</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/truck.svg" alt="">Truck and Towing</span> </li>
+                                          <li> <span><img src="https://www.autozone.com/images/navicons/tools.svg" alt="">Tools</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/chemicals.svg" alt="">Chemicals, Oil & Wash</span> </li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/performance.svg" alt="">Performance</span></li>
+                                   </ul>
+                                   <hr>
+                                   <h3>Most Popular</h3>
+                                   <ul>
+                                          <li>Batteries</li>
+                                          <li>Engine Oil</li>
+                                          <li>Brake Rotors</li>
+                                          <li>Brake Pads</li>
+                                          <li>Oil Filter</li>
+                                          <li>Air Filter</li>
+                                   </ul>
+                                   <p>Contact Us</p>
+                            </div>
+                            <div id="nav_logo">
+                                   <img src="./resources/logo/logo_6-rmbg.png" alt="" width="100%">
+                            </div>
+                            <div id="nav_addVehicle">
+                                   <span>
+                                          <a href="#"><img src="https://www.autozone.com/images/vehicle-new.svg" alt=""></a>
+                                   </span>
+                                   <p>Add Vehicle</p>
+                                   <span class="material-symbols-outlined">
+                                          chevron_right
+                                   </span>
+                            </div>
+                     </div>
+
+                     <div id="nav_mid">
+                            <span class="material-symbols-outlined">
+                                   search
+                            </span>
+                            <input type="text" placeholder="Find Parts and Products">
+                     </div>
+
+                     <div id="nav_right">
+                            <div id="nav_store">
+                                   <span><img src="https://www.autozone.com/images/icon-store-selected-d.svg" alt=""></span>
+                                   <p>4394 Summer Ave</p>
+                                   <span class="material-symbols-outlined">
+                                          chevron_right
+                                   </span>
+                            </div>
+                            <div id="nav_profile" >
+                                   <div class="dropdown">
+                                          <div class="dropbtn">
+                                                 <span> <img src="https://www.autozone.com/images/signin.svg" alt=""></span>
+                                                 <span class="material-symbols-outlined">
+                                                        expand_more
+                                                 </span>
+                                                 <a href="./html/signin.html" id="nav_signin">Sign In</a>
+                                          </div>
+                                          
+                                          <div class="dropdown-content">
+                                                 <a href="./html/signin.html" id="nav_signin2">Sign In</a>
+                                                 <a href="./html/signup.html" id="nav_signup">Create Account</a>
+                                                 <a href="#">Earn Rewards</a>
+                                                 <a href="#">Track Order</a>
+                                                 <a href="#">Find a Repair Shop</a>
+                                          </div>
+                                   </div>
+                            </div>
+                            <div id="nav_cart">
+                                   <span><img src="https://www.autozone.com/images/az-cart-nav.svg" alt=""></span>
+                                   <a href="#">Cart</a>
+                            </div>
+                     </div>
+              </div>
+       </nav>
+
+       <!-- body -->
+       <main>
+              <div class="top_main">
+                     <img class="top_main_img" src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P04/SDD/_fy23p04-catbanpromo-sameday-2-d.jpg" alt="" width="100%">
+                     <div id="top_main_display">
+                            <div>
+                                   <!-- Slideshow container -->
+                                   <div class="slideshow-container">
+                                   
+                                          <!-- Full-width images with number and caption text -->
+                                          <div class="mySlides">
+                                                 <!-- <div class="numbertext">1 / 3</div> -->
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/Heroes/_fy23p0506-superhero-battery-d.jpg" style="width:100%">
+                                          </div>
+                                   
+                                          <div class="mySlides">
+                                                 <!-- <div class="numbertext">2 / 3</div> -->
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/Heroes/_fy23p0506-superhero-rewards-d.jpg" style="width:100%">
+                                          </div>
+                                   
+                                          <div class="mySlides">
+                                                 <!-- <div class="numbertext">3 / 3</div> -->
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/Heroes/_fy23p0506-superhero-gumout-d.jpg" style="width:100%">
+                                          </div>
+
+                                          <div class="mySlides">
+                                                 <!-- <div class="numbertext">3 / 3</div> -->
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/Heroes/_fy23p0506-superhero-brake-job-d.jpg"
+                                                        style="width:100%">
+                                          </div>
+                                   
+                                          <!-- Next and previous buttons -->
+                                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                                   </div>
+                            </div>
+                            <div>
+                                   <div>
+                                          <div>
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY21/P01/fy21p01-featuredicons-rewards-d.svg" alt="">
+                                          </div>
+                                          <div>
+                                                 <h3>AUTOZONE REWARDS</h3>
+                                                 <p>Join for free and earn more</p>
+                                          </div>
+                                          <div>
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY20/P10/MobileFirst/fy20p10-superhero-right-arrow-icon-d.svg" alt="">
+                                          </div>
+                                   </div>
+                                   <div>
+                                          <div>
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/icons/featuredicons-sdd-d.svg"
+                                                        alt="">
+                                          </div>
+                                          <div>
+                                                 <h3>GET IT FAST</h3>
+                                                 <p>Delivery today, delivery tomorrow,or pickup order in-stores</p>
+                                          </div>
+                                          <div>
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY20/P10/MobileFirst/fy20p10-superhero-right-arrow-icon-d.svg"
+                                                        alt="">
+                                          </div>
+                                   </div>
+                                   <div>
+                                          <div>
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/icons/featuredicons-instore-deal-d.svg"
+                                                        alt="">
+                                          </div>
+                                          <div>
+                                                 <h3> STORE SAVINGS</h3>
+                                                 <p>View your monthly ad</p>
+                                          </div>
+                                          <div>
+                                                 <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY20/P10/MobileFirst/fy20p10-superhero-right-arrow-icon-d.svg"
+                                                        alt="">
+                                          </div>
+                                   </div>
+                            </div>
+                     </div>
+                     <img class="top_main_img" src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P04/Catbans/fy23p04-catban12-signin-d.jpg" alt="" width="100%">
+                     <div class="top_main_carousel">
+                            <h1 class="heading_h1">POPULAR ITEMS</h1>
+                            <div>
+                                   <div class="bottom_carousel_right_section">
+                                          <span class="bottom_carousel_prev_button"><span class=" material-symbols-outlined">arrow_back_ios</span></span>
+                                          <div class="bottom_carousel_display_container">
+                                                 <div class="bottom_carousel_cards_track">
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/prs/AF-2100/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      Prestone Antifreeze/Collant Universal 50/50...</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$12.99</span>
+                                                               <!-- <span>$490.00</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/flo/OP-1/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      FloTool Drain Pan 7 Quart Universal 50/50...</span>
+                                                               <span><img src="./resources/5-stars.png" alt="">(100+)</span>
+                                                               <span>$3.99</span>
+                                                               <!-- <span>$590.00</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/atg/52-136/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      Duralast 3/8in Drive 5/8in Magnetic Spark Plug Socket with 1...</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$19.99</span>
+                                                               <!-- <span>$240.99</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/luc/10020/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      Lucas Oil Products Fuel Treatment 5.25oz</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$6.99</span>
+                                                               <!-- <span>$190.00</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/prs/113645/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      Rain-X 2-IN-1 25 Degree Windshield Fluid 1gal</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$6.49</span>
+                                                               <!-- <span>$490.00</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/qcc/QV729/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      Quality Chain QV729 15lb Truck and SUV Cable Tire Snow...</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$169.99</span>
+                                                               <!-- <span>$190.00</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/noc/GB40/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      NOCO Genius 1000 Amp Lithium Portable Jump Starter</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$129.99</span>
+                                                               <!-- <span>$190.00</span> -->
+                                                        </div>
+                                                        <div class="bottom_carousel_card">
+                                                               <!-- image -->
+                                                               <div>
+                                                                      <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/ptx/82180/image/2/" alt="">
+                                                               </div>
+                                                               <!-- title -->
+                                                               <span>
+                                                                      Permatex Ultra Black RTV Silicone Maximum Oil...</span>
+                                                               <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                               <span>$10.79</span>
+                                                               <!-- <span>$490.00</span> -->
+                                                        </div>
+                                                 </div>
+                                          </div>
+                                          <span class="bottom_carousel_next_button"> <span
+                                                        class=" material-symbols-outlined">arrow_forward_ios</span></span>
+                                   </div>
+                            </div>
+                     </div>
+              </div>
+
+              <!-- mid-main -->
+              <div id="mid_main">
+                     <div id="mid_main_features">
+                            <div>
+                                   <div>
+                                          <img src="https://www.autozone.com/cdn/images/B2C/US/media/icons/featuredicons-mobileapp-d.svg"
+                                                 alt="">
+                                   </div>
+                                   <div>
+                                          <h3>MOBILE REWARDS AND SHOPPING</h3>
+                                          <p>Download our free app</p>
+                                   </div>
+                            </div>
+                            <div>
+                                   <div>
+                                          <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY20/P12/MobileFirst/fy20p12-3split-repairhelp-d.svg" alt="">
+                                   </div>
+                                   <div>
+                                          <h3>REPAIR HELP</h3>
+                                          <p>Guides, advice and how-to's.</p>
+                                   </div>
+                            </div>
+                            <div>
+                                   <div>
+                                          <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/Icons/3spliticon-fixfinder-d.svg"
+                                                 alt="">
+                                   </div>
+                                   <div>
+                                          <h3>FIX FINDER SOLUTIONS </h3>
+                                          <p>Check engine light on?</p>
+                                   </div>
+                            </div>
+                     </div>
+                     <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P03/catbans/fy23p03-catban12-sms-d.jpg" alt="" width="100%">
+                     <h1 class="heading_h1">TOP DEALS</h1>
+                     <div class="mid_top_deals_1">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/SplitBlocks/_fy22p056-2s-sylvania-silverstar-d.jpg" alt="" width="49.5%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/SplitBlocks/_fy22p056-2s-rainx-quantum-d.jpg" alt="" width="49.5%">
+                     </div>
+                     <div class="mid_top_deals_1">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/SplitBlocks/_fy23p0506-3svert-seafoam-d.jpg" alt="" width="33%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/SplitBlocks/_fy23p0506-3svert-prestone-d.jpg" alt="" width="33%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P0506/SplitBlocks/_fy23p0506-3svert-bosch-splugs-d.jpg" alt="" width="33%">
+                     </div>
+                     <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY23/P04/Catbans/_evergreen-catban12-battery-destination-d.jpg" alt="" width="100%">
+                     <h1 class="heading_h1">FEATURED CATEGORIES</h1>  
+                     <div class="mid_featured_categories">
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-batteries-m.jpg" alt="" width="50%">
+                                   <h2>BATTERY</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-jumpstarter-d.jpg" alt="" width="50%">
+                                   <h2>JUMP STARTER</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-jumpercables-d.jpg" alt="" width="50%">
+                                   <h2>JUMPER CABLES</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-sparkplugs-t.jpg" alt="" width="50%">
+                                   <h2>SPARK PLUGS</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-Pads-v2-m.jpg" alt="" width="50%">
+                                   <h2>BRAKE PADS</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-rotors-m.jpg" alt="" width="50%">
+                                   <h2>BRAKE ROTORS</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-engineoil-m.jpg" alt="" width="50%">
+                                   <h2>ENGINE OIL</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-antifreeze-m.jpg" alt="" width="50%">
+                                   <h2>ANTIFREEZE</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-winterwipers-m.jpg" alt="" width="50%">
+                                   <h2>WINTER WIPER BLADES</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-deicer-m.jpg" alt="" width="50%">
+                                   <h2>DE-ICER</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-portableheater-m.jpg" alt="" width="50%">
+                                   <h2>PORTABLE HEATER</h2>
+                            </div>
+                            <div>
+                                   <img src="https://www.autozone.com/cdn/images/B2C/US/media/content/FeatCat/evergreen-grid4-icemelt-m.jpg" alt="" width="50%">
+                                   <h2>ICE MELT</h2>
+                            </div>
+                     </div>
+                     <h1 class="heading_h1">BRANDS WE TRUST</h1>
+                     <div class="mid_top_deals_1">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/Landing/BrandLandingPage/fy20-bwt-mobil1-d.jpg" alt="" width="16%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/Landing/BrandLandingPage/fy20-bwt-valvoline-d.jpg" alt="" width="16%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/Landing/BrandLandingPage/fy21-bwt-gumout-d.jpg" alt="" width="16%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/Landing/BrandLandingPage/fy21-bwt-rainx-d.jpg" alt="" width="16%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/Landing/BrandLandingPage/fy22-prestoneantifreeze-d.jpg" alt="" width="16%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/Landing/BrandLandingPage/fy20-bwt-continental-d.jpg" alt="" width="16%">
+                     </div>
+                     <div class="mid_top_deals_1">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY22/P13/_evergreen-2s-ocs-d.jpg" alt="" width="49.5%">
+                            <img src="https://www.autozone.com/cdn/images/B2C/US/media/FY22/P13/_evergreen-2s-brakejob-d.jpg" alt="" width="49.5%">
+                     </div>
+                     <h1 class="heading_h1">TRENDING ITEMS IN YOUR AREA</h1>
+                     <div>
+                            <div class="bottom_carousel_right_section">
+                                   <span class="bottom_carousel_prev_button"><span
+                                                 class=" material-symbols-outlined">arrow_back_ios</span></span>
+                                   <div class="bottom_carousel_display_container">
+                                          <div class="bottom_carousel_cards_track">
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/prs/AF-2100/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               Prestone Antifreeze/Collant Universal 50/50...</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$12.99</span>
+                                                        <!-- <span>$490.00</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/flo/OP-1/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               FloTool Drain Pan 7 Quart Universal 50/50...</span>
+                                                        <span><img src="./resources/5-stars.png" alt="">(100+)</span>
+                                                        <span>$3.99</span>
+                                                        <!-- <span>$590.00</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/atg/52-136/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               Duralast 3/8in Drive 5/8in Magnetic Spark Plug Socket with 1...</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$19.99</span>
+                                                        <!-- <span>$240.99</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/luc/10020/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               Lucas Oil Products Fuel Treatment 5.25oz</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$6.99</span>
+                                                        <!-- <span>$190.00</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/prs/113645/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               Rain-X 2-IN-1 25 Degree Windshield Fluid 1gal</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$6.49</span>
+                                                        <!-- <span>$490.00</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/qcc/QV729/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               Quality Chain QV729 15lb Truck and SUV Cable Tire Snow...</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$169.99</span>
+                                                        <!-- <span>$190.00</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/noc/GB40/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               NOCO Genius 1000 Amp Lithium Portable Jump Starter</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$129.99</span>
+                                                        <!-- <span>$190.00</span> -->
+                                                 </div>
+                                                 <div class="bottom_carousel_card">
+                                                        <!-- image -->
+                                                        <div>
+                                                               <img src="https://contentinfo.autozone.com/znetcs/product-info/en/US/ptx/82180/image/2/"
+                                                                      alt="">
+                                                        </div>
+                                                        <!-- title -->
+                                                        <span>
+                                                               Permatex Ultra Black RTV Silicone Maximum Oil...</span>
+                                                        <span><img src="./resources/4-stars.png" alt="">(100+)</span>
+                                                        <span>$10.79</span>
+                                                        <!-- <span>$490.00</span> -->
+                                                 </div>
+                                          </div>
+                                   </div>
+                                   <span class="bottom_carousel_next_button"> <span
+                                                 class=" material-symbols-outlined">arrow_forward_ios</span></span>
+                            </div>
+                     </div>
+              </div>
+       </main>
+       
+</body>
+<script src="./script/index.js"></script>
+<script src="./script/nav.js"></script>
+
+</html>

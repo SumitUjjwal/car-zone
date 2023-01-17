@@ -1,0 +1,32 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;1,400&display=swap'); */
+
+* {
+       margin: 0%;
+       padding: 0%;
+       text-decoration: none;
+}
+
+.container {
+       width: 65%;
+       margin: auto;
+       padding: 0 10px;
+}
+
+/* media queries */
+@media screen and (max-width: 992px) {
+       .container {
+              width: 80%;
+       }
+}
+
+@media screen and (max-width: 768px) {
+       .container {
+              width: 90%;
+       }
+}
+
+@media screen and (max-width: 576px) {
+       .container {
+              width: 90%;
+       }
+}
