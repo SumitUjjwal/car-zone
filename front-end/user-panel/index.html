@@ -8,6 +8,7 @@
        <title>CarZone - Home Page</title>
        <!-- stylesheet -->
        <link rel="stylesheet" href="./style/utility.css">
+       <link rel="stylesheet" href="./style/nav.css">
        <link rel="stylesheet" href="./style/index.css">
 
        <!--material icon  -->
@@ -16,6 +17,7 @@
 </head>
 
 <body>
+       <!-- nav -->
        <nav>
               <div id="nav">
                      <div id="nav_left">
@@ -61,17 +63,13 @@
                                           <li>Air Filter</li>
                                    </ul>
                                    <p>Contact Us</p>
-                                   <!-- <a href="./html/about.html">About</a>
-                                   <a href="./html/users.html">Users</a>
-                                   <a id="nav_signup" href="./html/signup.html">Signup</a>
-                                   <a id="nav_login" href="./html/login.html">Login</a> -->
                             </div>
                             <div id="nav_logo">
                                    <img src="./resources/logo/logo_6-rmbg.png" alt="" width="100%">
                             </div>
                             <div id="nav_addVehicle">
                                    <span>
-                                          <img src="https://www.autozone.com/images/vehicle-new.svg" alt="">
+                                          <a href="#"><img src="https://www.autozone.com/images/vehicle-new.svg" alt=""></a>
                                    </span>
                                    <p>Add Vehicle</p>
                                    <span class="material-symbols-outlined">
@@ -102,7 +100,7 @@
                                                  <span class="material-symbols-outlined">
                                                         expand_more
                                                  </span>
-                                                 <p>Sign In</p>
+                                                 <a href="#">Sign In</a>
                                           </div>
                                           
                                           <div class="dropdown-content">
@@ -114,14 +112,20 @@
                                           </div>
                                    </div>
                             </div>
-                            <div>
+                            <div id="nav_cart">
                                    <span><img src="https://www.autozone.com/images/az-cart-nav.svg" alt=""></span>
-                                   <p>Cart</p>
+                                   <a href="#">Cart</a>
                             </div>
                      </div>
               </div>
        </nav>
 
+       <!-- body -->
+       <main>
+              <div class="top_main">
+                     
+              </div>
+       </main>
        
 </body>
 <script src="./script/index.js"></script>
