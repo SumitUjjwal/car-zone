@@ -5,13 +5,85 @@
        <meta charset="UTF-8">
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>CarZone - Home Page</title>
+       <title>CarZone - Admin - Dashboard</title>
        <link rel="stylesheet" href="./style/utility.css">
+       <link rel="stylesheet" href="./style/admin.index.css">
 </head>
 
 <body>
+       <div id="admin_nav">
+              <div id="admin_page_logo">
+                     <img src="resource_admin/Digital_basket_white (1).png" alt="" width="100px"><span></span>
+              </div>
+       </div>
+       <div class="admin_container">
+              <div id="info_wrapper">
+                     <div id="login">
+                            <h1>LOGIN ADMIN</h1>
+                            <form autocomplete="on" id="login_form">
+                                   <label for="username" class="uname" data-icon="u"> Your email or username
+                                   </label>
+                                   <input id="username" name="username" required="required" type="text"
+                                          placeholder="myusername or mymail@mail.com" />
+                                   <label for="password" class="youpasswd" data-icon="p"> Your password </label>
+                                   <input id="password" name="password" required="required" type="password"
+                                          placeholder="eg. X8df!90EO" />
+                                   <input type="submit" value="Login" class="submit" />
+                                   <a href="#dashboard"></a>
+                            </form>
+                     </div>
+              </div>
 
+       </div>
+       <div class="dashboard_container">
+              <!-- form column  -->
+              <div id="left_column">
+                     <div id="message">
+                            <h2>Hello Admin!</h2>
+                     </div>
+                     <!-- <button class="yl_btn" id="get_products"> Get Products </button> -->
+                     <select class="yl_btn" name="get_products" id="get_products" value="Get Products By Category">
+                            <option value="mobiles">Smart Phones</option>
+                            <option value="laptops">Laptops</option>
+                     </select>
+                     <button class="yl_btn" id="get_products"> Get Costumers </button>
+                     <form id="add_product">
+                            <h2>Add Product</h2>
+                            <label for="title" class="title" data-icon="u"> Product Title
+                            </label>
+                            <input id="add_title" name="title" required="required" type="text"
+                                   placeholder="eg. Samsung - Galaxy Z Flip4 128GB - Bora Purple" />
+
+                            <label for="price" class="pprice" data-icon="p"> Product Price </label>
+                            <input id="add_price" name="price" required="required" type="text"
+                                   placeholder="eg. $169.00" />
+
+                            <label for="image" class="pimg" data-icon="p" overflow="hidden"> Product Image Source
+                            </label>
+                            <input id="add_img" name="image" required="required" type="text"
+                                   placeholder="eg. https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6496/6496780_sd.jpg;maxHeight=200;maxWidth=300" />
+
+                            <label for="category" class="pcat" data-icon="p" overflow="hidden"> Product Category
+                            </label>
+                            <!-- <input type="text" id="add_cat" name="category" required="required"
+                                          placeholder="eg. Mobile, Laptop"> -->
+                            <select name="category" id="add_cat" required="required" value="Get Products By Category">
+                                   <option value="mobiles">Smart Phones</option>
+                                   <option value="laptops">Laptops</option>
+                            </select>
+
+                            <input type="submit" value="Add Product" />
+
+                     </form>
+              </div>
+              <!-- PRODUCT column -->
+              <div>
+                     <div id="products_wrapper">
+
+                     </div>
+              </div>
+       </div>
 </body>
-<script src="./script/index.js"></script>
+<script src="./script/admin.index.js"></script>
 
 </html>

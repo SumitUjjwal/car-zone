@@ -1,4 +1,8 @@
 /* navigation bar */
+*:focus {
+       outline: none;
+}
+
 nav {
        /* background-color: whitesmoke; */
        position: sticky;
@@ -19,7 +23,7 @@ nav>div {
        height: 60px;
 }
 
-nav>div :hover{
+nav>div :hover {
        cursor: pointer;
 }
 
@@ -87,27 +91,27 @@ nav>div :hover{
        align-items: center;
 }
 
-#nav_profile>div{
+#nav_profile>div {
        display: flex;
        flex-direction: column;
        align-items: center;
 }
 
-#nav_profile>div>:nth-child(1){
+#nav_profile>div>:nth-child(1) {
        display: flex;
        align-items: center;
 }
 
-#nav_profile a{
+#nav_profile a {
        color: black;
 }
 
-#nav_cart{
+#nav_cart {
        display: flex;
        flex-direction: column;
 }
 
-#nav_cart>a{
+#nav_cart>a {
        text-decoration: none;
        color: black;
 }
@@ -119,12 +123,12 @@ nav>div :hover{
        width: 0;
        position: fixed;
        z-index: 1;
-       top: 61px;
+       top: 60px;
        left: 0;
        background-color: #F2F2F2;
        overflow-x: hidden;
        transition: 0.5s;
-       padding-top: 60px;
+       padding-top: 10px;
        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
@@ -195,9 +199,24 @@ nav>div :hover{
        padding: 12px 16px;
        text-decoration: none;
        display: block;
-       
+
 }
 
 .dropdown:hover .dropdown-content {
        display: block;
+}
+
+
+@media screen and (max-width: 768px) {
+       #nav_addVehicle {
+              display: none;
+       }
+
+       #nav_store {
+              display: none;
+       }
+
+       #nav_mid {
+              width: 25%;
+       }
 }
