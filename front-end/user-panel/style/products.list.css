@@ -1,0 +1,348 @@
+#container {
+       width: 95%;
+       margin: auto;
+       height: auto;
+       display: flex;
+       padding: 5px;
+}
+
+#menu-sec {
+       width: 25%;
+       height: 80%;
+       border: 0.3px solid rgb(201, 201, 201);
+       height: 100vh;
+       overflow-y: scroll;
+       position: sticky;
+       top: 70px;
+
+}
+
+#contnt {
+       /* width: 100%; */
+       padding: 20px;
+}
+
+#get_fast>h3 {
+       width: 100%;
+       font-size: 17px;
+       padding-bottom: 8px;
+}
+
+#store_pickup {
+       display: flex;
+       flex-direction: column;
+       padding-bottom: 10px;
+       border-bottom: 0.3px solid rgb(201, 201, 201);
+       margin-bottom: 20px;
+}
+
+#store {
+       font-size: 13px;
+       padding-bottom: 10px;
+}
+
+#store>span {
+       color: #bb0628;
+}
+
+#pick_Up {
+       font-size: 15px;
+       padding-bottom: 10px;
+}
+
+#avlbl {
+       padding-bottom: 10px;
+       border-bottom: 0.3px solid rgb(201, 201, 201);
+       margin-bottom: 20px;
+}
+
+#avlbl_hd {
+       padding-bottom: 10px;
+}
+
+#ctgry {
+       padding-bottom: 10px;
+}
+
+.inpt_val {
+       display: flex;
+       flex-direction: column;
+       width: 60%;
+}
+
+.inpt_val>input {
+       padding: 8px;
+       margin-bottom: 10px;
+}
+
+.cat_list>label {
+       font-size: 16px;
+       margin-bottom: 10px;
+}
+
+.cat_list>input {
+       margin-bottom: 15px;
+}
+
+/*! --------| Product Section |---------------- */
+
+.right_section {
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+}
+
+.item_container {
+       padding: 32px 0;
+       width: 100%;
+       box-sizing: border-box;
+       display: flex;
+       justify-content: center;
+       border-bottom: 0.3px solid rgb(218, 215, 215);
+}
+
+/* ------ product Image */
+.product_image {
+       width: 33%;
+       padding-right: 16px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+}
+
+.product_image>img {
+       /* width: 40%; */
+       height: 200px;
+}
+
+/* product_details */
+.product_details {
+       width: 40%;
+       padding: 0 16px;
+       /* border: 2px solid red; */
+}
+
+.product_details>h4 {
+       font-size: 13px;
+       line-height: 17px;
+       font-weight: 500;
+       letter-spacing: 0.5px;
+       margin-bottom: 8px;
+       color: #001e73;
+}
+
+.product_model_details {
+       width: 100%;
+       display: flex;
+       margin-bottom: 8px;
+}
+
+.product_model_details>p {
+       font-size: 11px;
+       font-weight: 600;
+       line-height: 15px;
+       padding-right: 8px;
+       color: #040c13;
+}
+
+.product_model_details>p>span {
+
+       font-weight: 300;
+       line-height: 15px;
+       padding-right: 8px;
+       color: #040c13;
+}
+
+.product_rating {
+       display: flex;
+       margin-bottom: 8px;
+       padding-bottom: 8px;
+
+}
+
+.product_rating>div {
+       display: flex;
+       padding-right: 8px;
+       color: #bb0628;
+}
+
+.product_rating>span {
+       color: #bb0628;
+       font-size: 13px;
+}
+
+.product_rating+h5 {
+       color: #3b3b3b;
+       font-size: 13px;
+       font-weight: 600;
+       line-height: 17px;
+       padding-bottom: 10px;
+
+}
+
+.product_pickup_details {
+       display: flex;
+       margin-bottom: 8px;
+       padding-bottom: 10px;
+}
+
+.product_pickup_details>div {
+       display: flex;
+       flex-direction: column;
+}
+
+.product_pickup_details>i {
+       padding-right: 8px;
+       color: #55555a;
+}
+
+/* .product_pickup_details>div>h5{
+    font-size: 13px;
+    font-weight: 300px;
+}
+.product_pickup_details>div>h5>span{
+    font-size: 13px;
+    font-weight: 300px;
+    color: #bb0628;
+} */
+.product_pickup_details>div>p {
+       font-size: 13px;
+       font-weight: 600;
+       padding-bottom: 8px;
+}
+
+.product_pickup_details>div>p>span {
+       font-weight: 400;
+}
+
+.product_pickup_details>div>span {
+       font-size: 11px;
+       color: #bb0628;
+}
+
+.product_checkbox {
+       display: flex;
+       margin-bottom: 8px;
+}
+
+.product_checkbox>div {
+       display: flex;
+       font-size: 15px;
+       align-items: center;
+       color: #bb0628;
+       margin-right: 10px;
+       gap: 5px;
+}
+
+
+.product_payment {
+       width: 27%;
+       padding-left: 16px;
+       display: flex;
+       flex-direction: column;
+}
+
+.product_payment>h1 {
+       display: block;
+       font-size: 25px;
+       color: #1d252c;
+       padding-bottom: 8px;
+}
+
+.product_price_save {
+       padding-bottom: 10px;
+}
+
+.product_price_save>span:nth-child(1) {
+       background: #bb0628;
+       color: #ffffff;
+       font-size: 13px;
+       font-weight: 600;
+       margin-right: 4px;
+       padding: 3px 7px;
+}
+
+.product_price_save>span:nth-child(2) {
+       font-size: 13px;
+       line-height: 17px;
+       color: #040c13;
+}
+
+.product_payment>span {
+       font-size: 13px;
+       padding-bottom: 10px;
+}
+
+.product_payment>h6 {
+       color: #55555a;
+       font-size: 13px;
+       letter-spacing: 0.3px;
+       /* padding-bottom: 8px; */
+}
+
+.product_payment>button {
+       background: #000;
+       color: #ffffff;
+       border-radius: 4px;
+       font-size: 13px;
+       font-weight: 600;
+       display: flex;
+       justify-content: center;
+       gap: 4px;
+       line-height: 30px;
+       width: 90%;
+       border: none;
+       margin-bottom: 10px;
+}
+
+.product_payment>button:hover {
+       background-color: #3b3b3b;
+}
+
+.product_payment>button>span {
+       padding-right: 8px;
+}
+
+.product_payment>p {
+       font-size: 13px;
+       font-weight: 600;
+}
+
+.product_payment>p>span {
+       font-weight: 300;
+       color: #bb0628;
+}
+
+@media (max-width: 1000px) {
+       .authForm {
+              width: 35%;
+       }
+}
+
+@media (max-width: 750px) {
+       #menu-sec {
+              display: none;
+       }
+}
+
+@media (max-width: 500px) {
+       .item_container {
+              flex-direction: column;
+              align-items: center;
+       }
+
+       .product_image {
+              width: 90%;
+       }
+
+       .product_image>img {
+              height: 200px;
+       }
+       .product_details {
+              width: 90%;
+       }
+
+       .product_payment {
+              width: 90%;
+       }
+}

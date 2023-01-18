@@ -1,7 +1,8 @@
 const express = require("express");
 const { ProductModel } = require("../models/product.model");
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+
+// const jwt = require("jsonwebtoken");
+// const bcrypt = require("bcrypt");
 const productRouter = express.Router();
 productRouter.use(express.json());
 
@@ -12,23 +13,31 @@ productRouter.get("/", async (req, res) => {
        const limit = query.limit;
        const sort = query.sort;
        try {
-              if (searchTerm) {
+
+              if (sort == "asc" && searchTerm) {
+                     const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } }).sort({ price: 1 });
+                     res.json(product);
+              }
+              else if (sort == "desc" && searchTerm) {
+                     const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } }).sort({ price: -1 });
+                     res.json(product);
+              }
+              else if (sort == "cr" && searchTerm) {
+                     const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } }).sort({ rating: 1 });
+                     res.json(product);
+              }
+              else if (sort == "bs" && searchTerm) {
+                     const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } }).sort({ rating: 1, reviews: 1 });
+                     res.json(product);
+              }
+              else if (searchTerm) {
+                     // const product = await ProductModel.find({ $or: [{ productname: { $regex: searchTerm, $options: "i" } }, { email: { $regex: searchTerm, $options: "i" } }, { role: { $regex: searchTerm, $options: "i" } }, { location: { $regex: searchTerm, $options: "i" } }, { phone: { $regex: searchTerm, $options: "i" } }] });
                      const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } });
                      res.json(product);
               }
               else if (page) {
                      const product = await ProductModel.find().skip((page - 1) * limit).limit(limit);
                      res.json(product);
-              }
-              else if (sort) {
-                     if (sort === "asc") {
-                            const product = await ProductModel.find().sort({ price: 1 });
-                            res.json(product);
-                     }
-                     else if (sort === "desc") {
-                            const product = await ProductModel.find().sort({ price: -1 });
-                            res.json(product);
-                     }
               }
               else {
                      const product = await ProductModel.find(query);
@@ -43,6 +52,7 @@ productRouter.get("/", async (req, res) => {
        }
 })
 
+
 productRouter.post("/create", async (req, res) => {
        const posts = req.body;
        try {
@@ -51,7 +61,8 @@ productRouter.post("/create", async (req, res) => {
               console.log(product);
               res.json({ "msg": "New Product Added Successfully", "product": product });
        } catch (error) {
-
+              console.log(error);
+              res.sendStatus(500).send("error: Something went wrong");
        }
 })
 

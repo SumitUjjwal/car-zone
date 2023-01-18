@@ -14,7 +14,7 @@
     /* border: 1px solid white; */
 }
 .authNavigation_container>img{
-    width: 8%;
+    width: 100px;
 }
 .authNavigation_container>p{
     color: #000;
@@ -206,4 +206,22 @@ input::placeholder{
     font-size: 11px;
     color: #55555a;
     padding-bottom: 20px;
+}
+
+@media (max-width: 1000px) {
+    .authForm {
+        width: 35%;
+    }
+}
+
+@media (max-width: 750px) {
+    .authForm {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    .authForm {
+        width: 70%;
+    }
 }

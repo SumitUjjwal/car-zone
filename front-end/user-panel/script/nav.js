@@ -18,7 +18,9 @@ if(uname){
        nav_signin.innerText = uname;
        nav_signin.setAttribute("href", "#");
        nav_signin2.innerText = "My Account";
+       nav_signin2.setAttribute("href", "#");
        nav_signup.innerText = "Log Out";
+       nav_signup.setAttribute("href", "#");
 }
 
 // if(nav_signup.innerText == "Log Out"){
@@ -31,7 +33,7 @@ if(uname){
 // }
 
 if (uname) {
-       nav_signin.addEventListener("click", function () {
+       nav_signup.addEventListener("click", function () {
               localStorage.clear();
               alert("User logged out")
               nav_signup.innerText = "Create Account";
@@ -40,3 +42,21 @@ if (uname) {
               window.location.reload();
        })
 }
+
+
+// // search functionality
+
+// let search = document.getElementById('searchBar');
+// let searchTerm = "";
+// search.addEventListener('keypress', (event) => {
+//        if (event.key === "Enter") {
+//               event.preventDefault();
+//               localStorage.setItem('searchVal', searchTerm);
+//               console.log(searchTerm);
+//               window.location.href = "./html/products.list.html";
+//        }
+//        else {
+//               searchTerm += event.key;
+//        }
+
+// })
