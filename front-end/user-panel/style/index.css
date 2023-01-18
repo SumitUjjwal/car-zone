@@ -103,7 +103,7 @@ main {
 
 
 /* top-bottom carousel */
-.heading_h1{
+.heading_h1 {
        font-size: 35px;
        font-weight: 700;
        text-decoration: underline;
@@ -211,16 +211,17 @@ main {
        color: rgb(179, 179, 179);
        cursor: pointer;
 }
+
 /* mid_main */
 
-#mid_main_features{
+#mid_main_features {
        display: flex;
        justify-content: space-around;
        margin: 50px auto;
        /* border: 1px solid red; */
 }
 
-#mid_main_features>div{
+#mid_main_features>div {
        display: flex;
        /* justify-content: space-around; */
        gap: 20px;
@@ -231,35 +232,81 @@ main {
        padding: 10px 20px;
 }
 
-#mid_main_features>div img{
+#mid_main_features>div img {
        width: 50px;
 }
 
-.mid_top_deals_1{
+.mid_top_deals_1 {
        display: flex;
        justify-content: space-between;
        margin: 60px auto;
 }
 
-.mid_featured_categories{
+.mid_featured_categories {
        width: 100%;
        display: grid;
-       grid-template-columns: repeat(4,1fr);
+       grid-template-columns: repeat(4, 1fr);
        column-gap: 0px;
        /* row-gap: 30px; */
        margin: 50px auto;
 }
 
-.mid_featured_categories>div{
-       margin: auto ;
+.mid_featured_categories>div {
+       margin: auto;
        border: 1px solid #C4C4C4;
        text-align: center;
        padding: 20px 40px;
        width: 78%;
 }
 
-.mid_featured_categories>div:hover{
+.mid_featured_categories>div:hover {
        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
        transition-duration: 300ms;
        cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+       .mid_featured_categories {
+              grid-template-columns: repeat(3, 1fr);
+       }
+
+       #top_main_display {
+              flex-direction: column;
+       }
+
+       #top_main_display>:nth-child(1) {
+              width: 100%;
+       }
+
+       #top_main_display>:nth-child(2) {
+              width: 96%;
+       }
+
+       #mid_main_features {
+              flex-direction: column;
+       }
+
+       #mid_main_features>div {
+              width: 90%;
+       }
+}
+
+@media (max-width: 750px) {
+       .mid_featured_categories {
+              grid-template-columns: repeat(2, 1fr);
+       }
+}
+
+@media (max-width: 500px) {
+       .mid_featured_categories {
+              grid-template-columns: repeat(1, 1fr);
+       }
+
+       #top_main_display>:nth-child(1) {
+              width: 100%;
+       }
+
+       #top_main_display>:nth-child(2) {
+              width: 96%;
+       }
 }
