@@ -1,20 +1,19 @@
 const express = require("express");
 const { ProductModel } = require("../models/product.model");
+
 // const jwt = require("jsonwebtoken");
 // const bcrypt = require("bcrypt");
 const productRouter = express.Router();
 productRouter.use(express.json());
 
 productRouter.get("/", async (req, res) => {
-       // const product = await ProductModel.find();
-       // res.json(product);
-
        const query = req.query;
        const searchTerm = query.q;
        const page = query.page;
        const limit = query.limit;
        const sort = query.sort;
        try {
+
               if (sort == "asc" && searchTerm) {
                      const product = await ProductModel.find({ title: { $regex: searchTerm, $options: "i" } }).sort({ price: 1 });
                      res.json(product);
@@ -40,7 +39,6 @@ productRouter.get("/", async (req, res) => {
                      const product = await ProductModel.find().skip((page - 1) * limit).limit(limit);
                      res.json(product);
               }
-
               else {
                      const product = await ProductModel.find(query);
                      console.log(product);
@@ -55,16 +53,39 @@ productRouter.get("/", async (req, res) => {
 })
 
 
-productRouter.post("/add", async (req, res) => {
-       const product = req.body;
+productRouter.post("/create", async (req, res) => {
+       const posts = req.body;
        try {
-              // const newProduct = new ProductModel(movieDetail);
-              // await newMovie.save();
-              await ProductModel.insertMany(product);
-              res.send("Product added successfully");
+              const product = new ProductModel(posts);
+              await product.save();
+              console.log(product);
+              res.json({ "msg": "New Product Added Successfully", "product": product });
        } catch (error) {
               console.log(error);
               res.sendStatus(500).send("error: Something went wrong");
+       }
+})
+
+productRouter.patch("/update/:id", async (req, res) => {
+       const id = req.params.id;
+       const updateProduct = req.body;
+       try {
+              await ProductModel.findByIdAndUpdate({ _id: id }, updateProduct);
+              res.json({ "msg": "Product Updated Successfully", "product": updateProduct });
+       } catch (error) {
+              console.log(error.message);
+              res.json({ "msg": "Product Updated Failed" })
+       }
+})
+
+productRouter.delete("/delete/:id", async (req, res) => {
+       const id = req.params.id;
+       try {
+              await ProductModel.findByIdAndDelete({ _id: id });
+              res.json({ "msg": "Product Deleted Successfully" });
+       } catch (error) {
+              console.log(error.message);
+              res.json({ "msg": "Product Deletion Failed" })
        }
 })
 
