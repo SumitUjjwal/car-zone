@@ -1,25 +1,63 @@
-.authNavigation{
+
+.authNavigation {
     width: 100%;
     background: #F2F2F2;
     margin-bottom: 50px;
-    height: 50px;
+    height: 60px;
 }
-.authNavigation_container{
+
+.authNavigation_container {
     width: 70%;
+    height: 65%;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    /* border: 1px solid white; */
+    /* border: 1px solid black; */
+
 }
-.authNavigation_container>img{
-    width: 100px;
+
+.authNavigation_container>img {
+    width: 150px;
 }
-.authNavigation_container>p{
+
+.authNavigation_container>p {
     color: #000;
     font-weight: 300;
     font-size: 13px;
+}
+
+#checkout_page_logo {
+    display: flex;
+    align-items: center;
+}
+
+#checkout_page_logo>span {
+    /* font-size: 30px; */
+    color: white;
+}
+
+#checkout_nav_bar {
+    background-color: #bb0628;
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 5px 30px;
+    position: sticky;
+    top: 0px;
+}
+
+#inner_checkout_nav_bar {
+    width: 65%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#inner_checkout_nav_bar>a {
+    color: #96aed6;
+    text-decoration: none;
 }
 /* ------- auth form ------- */
 body{
