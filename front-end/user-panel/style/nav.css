@@ -206,6 +206,8 @@ nav>div :hover {
        display: block;
 }
 
+#cart_icon {}
+
 
 @media screen and (max-width: 768px) {
        #nav_addVehicle {
@@ -219,4 +221,9 @@ nav>div :hover {
        #nav_mid {
               width: 25%;
        }
+
+       /* .dropdown: */
+       /* .dropdown: .dropdown-content {
+              display: block;
+       } */
 }

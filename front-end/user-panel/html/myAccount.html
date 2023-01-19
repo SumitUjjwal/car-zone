@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>My Account</title>
+       <!-- stylesheet -->
+       <link rel="stylesheet" href="../style/nav.css">
+       <link rel="stylesheet" href="../style/utility.css">
+
+       <!--material icon  -->
+       <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+       <!-- nav -->
+       <nav>
+              <div id="nav">
+                     <div id="nav_left">
+                            <div id="nav_menu" onclick="openNav()">
+                                   <span id="nav_icon" class="material-symbols-outlined">
+                                          menu
+                                   </span>
+                                   <p>Menu</p>
+                            </div>
+                            <div id="mySidenav" class="sidenav">
+                                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                   <h3>Most Popular</h3>
+                                   <ul>
+                                          <li>Batteries</li>
+                                          <li>Engine Oil</li>
+                                          <li>Brake Rotors</li>
+                                          <li>Brake Pads</li>
+                                          <li>Oil Filter</li>
+                                          <li>Air Filter</li>
+                                   </ul>
+                                   <hr>
+                                   <h3>Shop All</h3>
+                                   <ul>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/parts.svg" alt="">Auto
+                                                        Parts</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/interior.svg"
+                                                               alt="">Interior Accessories</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/exterior.svg"
+                                                               alt="">Exterior Accessories</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/truck.svg" alt="">Truck
+                                                        and Towing</span> </li>
+                                          <li> <span><img src="https://www.autozone.com/images/navicons/tools.svg"
+                                                               alt="">Tools</span></li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/chemicals.svg"
+                                                               alt="">Chemicals, Oil & Wash</span> </li>
+                                          <li><span><img src="https://www.autozone.com/images/navicons/performance.svg"
+                                                               alt="">Performance</span></li>
+                                   </ul>
+                                   <hr>
+                                   <h3>Most Popular</h3>
+                                   <ul>
+                                          <li>Batteries</li>
+                                          <li>Engine Oil</li>
+                                          <li>Brake Rotors</li>
+                                          <li>Brake Pads</li>
+                                          <li>Oil Filter</li>
+                                          <li>Air Filter</li>
+                                   </ul>
+                                   <p>Contact Us</p>
+                            </div>
+                            <div id="nav_logo">
+                                   <a href="../index.html"><img src="../resources/logo/logo_6-rmbg.png" alt=""
+                                                 width="100%"></a>
+                            </div>
+                            <div id="nav_addVehicle">
+                                   <span>
+                                          <a href="#"><img src="https://www.autozone.com/images/vehicle-new.svg" alt=""></a>
+                                   </span>
+                                   <p>Add Vehicle</p>
+                                   <span class="material-symbols-outlined">
+                                          chevron_right
+                                   </span>
+                            </div>
+                     </div>
+       
+                     <div id="nav_mid">
+                            <span class="material-symbols-outlined">
+                                   search
+                            </span>
+                            <input type="text" placeholder="Find Parts and Products" id="searchBar">
+                     </div>
+       
+                     <div id="nav_right">
+                            <div id="nav_store">
+                                   <span><img src="https://www.autozone.com/images/icon-store-selected-d.svg" alt=""></span>
+                                   <p>4394 Summer Ave</p>
+                                   <span class="material-symbols-outlined">
+                                          chevron_right
+                                   </span>
+                            </div>
+                            <div id="nav_profile">
+                                   <div class="dropdown">
+                                          <div class="dropbtn">
+                                                 <span> <img src="https://www.autozone.com/images/signin.svg" alt=""></span>
+                                                 <span class="material-symbols-outlined">
+                                                        expand_more
+                                                 </span>
+                                                 <a href="./html/signin.html" id="nav_signin">Sign In</a>
+                                          </div>
+       
+                                          <div class="dropdown-content">
+                                                 <a href="./signin.html" id="nav_signin2">Sign In</a>
+                                                 <a href="./signup.html" id="nav_signup">Create Account</a>
+                                                 <a href="#">Earn Rewards</a>
+                                                 <a href="#">Track Order</a>
+                                                 <a href="#">Find a Repair Shop</a>
+                                          </div>
+                                   </div>
+                            </div>
+                            <div id="nav_cart">
+                                   <span><img src="https://www.autozone.com/images/az-cart-nav.svg" alt=""></span>
+                                   <a href="./cart.html" id="cart_text">Cart</a>
+                            </div>
+                     </div>
+              </div>
+       </nav>
+</body>
+
+<script src="../script/nav.js"></script>
+</html>

@@ -54,7 +54,7 @@ userRouter.post("/login", async (req, res) => {
                      })
               }
               else {
-                     res.json({ "msg": "Please Enter Credentials" });
+                     res.json({ "msg": "Please Enter Valid Credentials" });
               }
        } catch (error) {
               res.json("Error in login");
