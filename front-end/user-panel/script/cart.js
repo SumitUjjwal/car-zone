@@ -6,12 +6,16 @@ let item = document.getElementById("items");
 let price;
 let price_summary = document.getElementById("price_summary");
 let carousel_card = document.querySelector(".card");
-let originalPriceInput = document.querySelector('#original_price')
-let discountedPriceInput = document.querySelector('#discounted_price')
-let totalPriceInput = document.querySelector('#total_price_num')
-let taxPriceInput = document.getElementById("tax_price")
-// localStorage.setItem('op', JSON.stringify(0))
-// localStorage.setItem('dp', JSON.stringify(0))
+let originalPriceInput = document.querySelector('#original_price');
+let discountedPriceInput = document.querySelector('#discounted_price');
+let totalPriceInput = document.querySelector('#total_price_num');
+let taxPriceInput = document.getElementById("tax_price");
+let checkout_btn = document.getElementById("checkout");
+
+
+
+// localStorage.setItem('op', JSON.stringify(0));
+// localStorage.setItem('dp', JSON.stringify(0));
 // async function CartItems(id) {
 //        let request = await fetch(`${url}${id}`);
 //        let data = await request.json();
@@ -169,12 +173,12 @@ let check_item = JSON.parse(localStorage.getItem("cartItem")) || null;
 let cart_container = document.getElementById("cart_main_container");
 let empty_container = document.getElementById("empty_main_container");
 
-if (check_item == null) {
-       empty_container.style.display = "none"
-}
-else {
-       cart_container.style.display = "flex";
-}
+// if (check_item == null) {
+//        empty_container.style.display = "none"
+// }
+// else {
+//        cart_container.style.display = "flex";
+// }
 
 async function cardItems(id) {
        let category = localStorage.getItem("searchVal");
@@ -199,6 +203,7 @@ async function cardItems(id) {
 
 let LSid = JSON.parse(localStorage.getItem('cartItem')) || [];
 
+
 // show(LSid)
 
 // async function show(LSid) {
@@ -216,7 +221,7 @@ let LSid = JSON.parse(localStorage.getItem('cartItem')) || [];
 //        // renderCards(arr)
 // }
 renderCards()
-
+let lsPrice = 0;
 function getAsCard(item) {
        console.log(item)
        console.log(item[0].img_src)
@@ -307,6 +312,7 @@ function getAsCard(item) {
        let item_price = document.createElement('div');
        item_price.setAttribute("class", "item_price");
        item_price.innerText = `$${item[0].price}`;
+       lsPrice += item[0].price;
 
 
 
@@ -327,13 +333,14 @@ async function renderCards() {
                      discountPrice += +data.price;
                      // let tax = (((dp) / 100) * 18).toFixed(2);
 
-                     localStorage.setItem("op", JSON.stringify(originalPrice))
-                     localStorage.setItem("dp", JSON.stringify(discountPrice))
+                     // localStorage.setItem("op", JSON.stringify(originalPrice))
+                     // localStorage.setItem("dp", JSON.stringify(discountPrice))
                      // sessionStorage.setItem("tax", JSON.stringify(tax))
                      // calculateData(data)
                      // updateOrderSummary()
                      render_div.append(getAsCard(data))
-
+                     localStorage.setItem("combPrice", lsPrice)
+                     updateOrderSummary()
               })
        })
 
@@ -346,24 +353,32 @@ async function renderCards() {
 
 //        // sessionStorage.setItem('op', JSON.stringify(op))
 //        // sessionStorage.setItem('dp', JSON.stringify(dp))
-       // console.log('op', op, 'dp', dp)
+//        console.log('op', op, 'dp', dp)
 //        updateOrderSummary()
 // }
 
-// function updateOrderSummary(originalPrice, discountPrice) {
-//        let op = JSON.parse(localStorage.getItem('op'))
-//        let dp = JSON.parse(localStorage.getItem('dp'))
-//        let tax = (((dp) / 100) * 18).toFixed(2);
+function updateOrderSummary(originalPrice, discountPrice) {
+       let combPrice = JSON.parse(localStorage.getItem('combPrice'));
+       console.log('combPrice', combPrice)
+       let tax = (((combPrice) / 100) * 18).toFixed(2);
 
-//        originalPriceInput.innerText = `$${op.toFixed(2)}`;
-//        discountedPriceInput.innerText = `$${dp.toFixed(2)}`;
-//        taxPriceInput.innerText = `$${tax}`
-//        totalPriceInput.innerText = `$${(+dp + +tax).toFixed(2)}`;
-       // console.log('originalPrice', op, 'discountPrice', dp)
-// }
+       originalPriceInput.innerText = `$${(combPrice*1.5).toFixed(2)}`;
+       discountedPriceInput.innerText = `$${combPrice.toFixed(2)}`;
+       taxPriceInput.innerText = `$${tax}`
+       totalPriceInput.innerText = `$${(+combPrice + +tax).toFixed(2)}`;
+       localStorage.setItem("totalPrice", JSON.stringify(totalPriceInput.innerText));
+}
 
 
-
+checkout_btn.addEventListener("click", async () => {
+       if(uname){
+              window.location.href = "./checkout.html";
+       }
+       else{
+              alert("Please Sign In");
+              window.location.href = "./signin.html";
+       }
+})
 
 // ------------------------------------------------------------------------------------------------
 // top-bottom carousel
