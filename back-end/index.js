@@ -12,6 +12,7 @@ const { orderRouter } = require("./routes/order.route");
 
 const app = express();
 app.use(cors());
+
 app.get("/", (req, res) => {
        res.json({ "msg": "Welcome to CarZone" });
 })
@@ -19,6 +20,8 @@ app.get("/", (req, res) => {
 app.use("/user", userRouter);
 app.use("/product", productRouter);
 app.use("/order", orderRouter);
+
+app.use("/products", productRouter);
 
 app.listen(port, async () => {
        try {
