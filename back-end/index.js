@@ -8,6 +8,7 @@ const { connect } = require("./config/db");
 // routes
 const { userRouter } = require("./routes/user.route");
 const { productRouter } = require("./routes/product.route");
+const { orderRouter } = require("./routes/order.route");
 
 const app = express();
 app.use(cors());
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
 
 app.use("/user", userRouter);
 app.use("/product", productRouter);
+app.use("/order", orderRouter);
 
 app.listen(port, async () => {
        try {
