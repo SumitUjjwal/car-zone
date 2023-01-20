@@ -14,24 +14,32 @@ async function userLogin(event) {
               email, password
        };
 
-       let register_request = await fetch(`${baseUrl}/user/login`, {
-              method: "POST",
-              headers: {
-                     "Content-Type": "application/json",
-              },
-              body: JSON.stringify(userObj)
-       }).then((res) => res.json())
-              .then((data) => {
-                     console.log(data);
-                     localStorage.setItem("token", data.token);
-                     alert(data.msg);
+       if(email == "admin@mail.com" && password == "admin123") {
+              window.location.href = "../../admin-panel/index.html"
+              localStorage.setItem("username", "Admin");
+       }
+       else{
+              let register_request = await fetch(`${baseUrl}/user/login`, {
+                     method: "POST",
+                     headers: {
+                            "Content-Type": "application/json",
+                     },
+                     body: JSON.stringify(userObj)
+              }).then((res) => res.json())
+                     .then((data) => {
+                            console.log(data);
+                            localStorage.setItem("token", data.token);
+                            alert(data.msg);
 
-                     localStorage.setItem("username", data.name);
-                     console.log(data.name);
-                     if (data.name) {
-                            window.location.href = "../index.html";
-                     }
-              })
+                            localStorage.setItem("username", data.name);
+                            console.log(data.name);
+                            localStorage.setItem("userId", data.userId);
+                            console.log(data.userId);
+                            if (data.name) {
+                                   window.location.href = "../index.html";
+                            }
+                     })
+       }
 }
 
 // let uname = localStorage.getItem("username");

@@ -68,5 +68,4 @@ search.addEventListener('keypress', (event) => {
        else {
               searchTerm += event.key;
        }
-
 })

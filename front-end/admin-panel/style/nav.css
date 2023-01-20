@@ -1,0 +1,229 @@
+/* navigation bar */
+*:focus {
+       outline: none;
+}
+
+nav {
+       /* background-color: whitesmoke; */
+       position: sticky;
+       top: 0;
+       z-index: 5;
+       height: 60px;
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+       background-color: #F2F2F2;
+}
+
+nav>div {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       width: 98%;
+       margin: auto;
+       /* border: 1px solid red; */
+       height: 60px;
+}
+
+nav>div :hover {
+       cursor: pointer;
+}
+
+#nav_left {
+       display: flex;
+       justify-content: space-around;
+       width: 25%;
+       /* border: 1px solid black; */
+}
+
+#nav_menu {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       /* border: 1px solid black; */
+}
+
+#nav_logo {
+       /* border: 1px solid black; */
+       margin: auto;
+       width: 40%;
+}
+
+#nav_addVehicle {
+       display: flex;
+       align-items: center;
+       /* border: 1px solid black; */
+
+}
+
+#nav_addVehicle>p {
+       font-size: 15px;
+}
+
+
+
+#nav_mid {
+       background-color: white;
+       border: 1px solid whitesmoke;
+       border-radius: 5px;
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       height: 30px;
+       width: 45%;
+       margin: auto;
+}
+
+#nav_mid>input {
+       border: none;
+       width: 90%;
+       height: 100%;
+}
+
+#nav_right {
+       display: flex;
+       justify-content: space-around;
+       align-items: center;
+       width: 20%;
+       /* border: 1px solid black; */
+}
+
+#nav_store {
+       display: flex;
+       align-items: center;
+}
+
+#nav_profile>div {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+
+#nav_profile>div>:nth-child(1) {
+       display: flex;
+       align-items: center;
+}
+
+#nav_profile a {
+       color: black;
+}
+
+#nav_cart {
+       display: flex;
+       flex-direction: column;
+}
+
+#nav_cart>a {
+       text-decoration: none;
+       color: black;
+}
+
+/* ---------------- */
+/* side nav */
+.sidenav {
+       height: 100%;
+       width: 0;
+       position: fixed;
+       z-index: 1;
+       top: 60px;
+       left: 0;
+       background-color: #F2F2F2;
+       overflow-x: hidden;
+       transition: 0.5s;
+       padding-top: 10px;
+       box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.sidenav hr {
+       width: 90%;
+       margin: auto;
+}
+
+.sidenav li,
+.sidenav h3 {
+       padding: 8px 8px 8px 32px;
+       text-decoration: none;
+       font-size: 18px;
+       color: black;
+       display: block;
+       transition: 0.3s;
+}
+
+.sidenav img {
+       width: 20px;
+       padding: 0px 10px 0px 0px;
+}
+
+.sidenav li:hover,
+.sidenav h3:hover {
+       color: rgb(131, 131, 131);
+       cursor: pointer;
+}
+
+.sidenav .closebtn {
+       position: absolute;
+       top: 0;
+       right: 25px;
+       font-size: 36px;
+       margin-left: 50px;
+       color: black;
+}
+
+/* profile drop-down menu */
+
+.dropbtn {
+       /* background-color: #04AA6D; */
+       /* color: white; */
+       padding: 16px;
+       font-size: 16px;
+       border: none;
+}
+
+.dropdown {
+       position: relative;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+}
+
+.dropdown-content {
+       display: none;
+       position: absolute;
+       background-color: #f1f1f1;
+       width: 260px;
+       box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+       z-index: 1;
+       top: 50px;
+}
+
+.dropdown-content a {
+       color: black;
+       padding: 12px 16px;
+       text-decoration: none;
+       display: block;
+
+}
+
+.dropdown:hover .dropdown-content {
+       display: block;
+}
+
+#cart_icon {}
+
+
+@media screen and (max-width: 768px) {
+       #nav_addVehicle {
+              display: none;
+       }
+
+       #nav_store {
+              display: none;
+       }
+
+       #nav_mid {
+              width: 25%;
+       }
+
+       /* .dropdown: */
+       /* .dropdown: .dropdown-content {
+              display: block;
+       } */
+}
