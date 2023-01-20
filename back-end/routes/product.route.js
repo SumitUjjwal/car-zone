@@ -58,13 +58,36 @@ productRouter.get("/", async (req, res) => {
 productRouter.post("/add", async (req, res) => {
        const product = req.body;
        try {
-              // const newProduct = new ProductModel(movieDetail);
-              // await newMovie.save();
-              await ProductModel.insertMany(product);
-              res.send("Product added successfully");
+              const newProduct = new ProductModel(product);
+              await newProduct.save();
+              // await ProductModel.insertMany(product);
+              res.json({"msg": "Product added successfully"});
        } catch (error) {
               console.log(error);
-              res.sendStatus(500).send("error: Something went wrong");
+              res.status(500).json({"msg": "Something went wrong"});
+       }
+})
+
+productRouter.patch("/update/:id", async (req, res) => {
+       const product = req.body;
+       const id = req.params.id;
+       try {
+              await ProductModel.findByIdAndUpdate(id, product);
+              res.json({ "msg": "Product updated successfully" });
+       } catch (error) {
+              console.log(error);
+              res.status(500).json({ "msg": "Something went wrong" });
+       }
+})
+
+productRouter.delete("/delete/:id", async (req, res) => {
+       const id = req.params.id;
+       try {
+              await ProductModel.findByIdAndDelete(id);
+              res.json({ "msg": "Product deleted successfully" });
+       } catch (error) {
+              console.log(error);
+              res.status(500).json({ "msg": "Something went wrong" });
        }
 })
 
