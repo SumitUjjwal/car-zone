@@ -42,7 +42,7 @@ if (uname) {
               nav_signup.innerText = "Create Account";
               nav_signin.innerText = "Sign In";
               nav_signin2.innerText = "Sign In";
-              window.location.href = "../user-panel/index.html";
+              window.location.href = "../index.html";
        })
 }
 

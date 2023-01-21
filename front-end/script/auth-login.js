@@ -15,7 +15,7 @@ async function userLogin(event) {
        };
 
        if(email == "admin@mail.com" && password == "admin123") {
-              window.location.href = "../../admin-panel/admin_index.html";
+              window.location.href = "../admin-panel/admin_index.html";
               localStorage.setItem("name", "Admin");
        }
        else{
