@@ -1,5 +1,7 @@
+
 .checkout_container {
        margin-bottom: 50px;
+       height: 68vh;
 }
 
 .left_checkout_container {
@@ -74,4 +76,43 @@
 .left_payment_button button {
        width: 100%;
        color: black;
+}
+
+/* ------ footer ----- */
+
+.authFooter {
+       border-top: 1px solid rgb(201, 201, 201);
+       background: #F2F2F2;
+       width: 100%;
+}
+
+.authFooterContainer {
+       width: 70%;
+       margin: auto;
+}
+
+.authFooterContainer>div {
+       margin: 15px 0;
+}
+
+.authFooterContainer>div>span {
+       color: #800020;
+       font-size: 11px;
+       line-height: 1.5px;
+}
+
+.authFooterContainer>div:nth-child(1)>span:nth-child(1) {
+       padding-right: 5px;
+       border-right: 0.3px solid rgb(207, 207, 207);
+}
+
+.authFooterContainer>div:nth-child(1)>span:nth-child(2) {
+       padding: 0 5px;
+       border-right: 0.3px solid rgb(207, 207, 207);
+}
+
+.authFooterContainer>p {
+       font-size: 11px;
+       color: #55555a;
+       padding-bottom: 20px;
 }
