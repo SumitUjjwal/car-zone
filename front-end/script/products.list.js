@@ -1,6 +1,6 @@
 
 
-let baseUrl = 'http://localhost:8080'
+let baseUrl = 'https://vast-rose-jellyfish-wrap.cyclic.app'
 
 let cartArr = JSON.parse(localStorage.getItem('cartItems')) || [];
 
