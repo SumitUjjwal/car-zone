@@ -1,4 +1,4 @@
-
+let baseUrl = "https://vast-rose-jellyfish-wrap.cyclic.app"
 let img_src = sessionStorage.getItem("img_src");
 let title = sessionStorage.getItem("title");
 // let price = JSON.parse(localStorage.getItem('dp'))
@@ -73,7 +73,7 @@ let user_address = document.getElementById("userAddress");
 async function cardItems(id) {
        let category = localStorage.getItem("searchVal");
        // console.log(category)
-       let request = await fetch(`http://localhost:8080/product?_id=${id}`);
+       let request = await fetch(`${baseUrl}/product?_id=${id}`);
        let data = await request.json();
        // console.log(data)
        return data;

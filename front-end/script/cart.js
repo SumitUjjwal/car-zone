@@ -1,6 +1,6 @@
 
 
-let url = `http://localhost:8080/`;
+let url = `https://vast-rose-jellyfish-wrap.cyclic.app`;
 // console.log(url)
 let item = document.getElementById("items");
 let price;
@@ -183,7 +183,7 @@ let empty_container = document.getElementById("empty_main_container");
 async function cardItems(id) {
        let category = localStorage.getItem("searchVal");
        // console.log(category)
-       let request = await fetch(`http://localhost:8080/product?_id=${id}`);
+       let request = await fetch(`${url}/product?_id=${id}`);
        let data = await request.json();
        // console.log(data)
        return data;

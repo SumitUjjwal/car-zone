@@ -1,3 +1,4 @@
+
 let payment_button = document.getElementById("payment_button");
 
 
@@ -16,7 +17,7 @@ payment_button.addEventListener("click", async function (event) {
 
        console.log(obj);
        
-       let request = fetch(`http://localhost:8080/order/add`, {
+       let request = fetch(`${baseUrl}/order/add`, {
               method: "POST",
               headers: {
                      "Content-Type": "application/json"

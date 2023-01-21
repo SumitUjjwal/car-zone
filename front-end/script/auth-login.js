@@ -1,4 +1,4 @@
-let baseUrl = "http://localhost:8080";
+let baseUrl = "https://vast-rose-jellyfish-wrap.cyclic.app";
 
 let login = document.getElementById("loginBtn").addEventListener("click", userLogin);
 // let nav_signin = document.getElementById("nav_signin");
