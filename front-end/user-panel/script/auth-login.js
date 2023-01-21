@@ -15,8 +15,8 @@ async function userLogin(event) {
        };
 
        if(email == "admin@mail.com" && password == "admin123") {
-              window.location.href = "../../admin-panel/admin_index.html"
-              localStorage.setItem("username", "Admin");
+              window.location.href = "../../admin-panel/admin_index.html";
+              localStorage.setItem("name", "Admin");
        }
        else{
               let register_request = await fetch(`${baseUrl}/user/login`, {
