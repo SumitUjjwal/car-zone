@@ -123,7 +123,7 @@ input::placeholder{
     font-size: 16px;
     font-weight: 500;
 }
-#submitBtn{
+#submitBtn, #loginBtn{
     background: black;
     border-radius: 4px;
     color: #ffffff;
@@ -133,7 +133,7 @@ input::placeholder{
     line-height: 50px;
     transition-duration: 200ms;
 }
-#submitBtn:hover{
+#submitBtn:hover, #loginBtn:hover{
     background: #800020;
 }
 
