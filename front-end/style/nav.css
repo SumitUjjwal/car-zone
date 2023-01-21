@@ -47,10 +47,6 @@ nav>div :hover {
        width: 40%;
 }
 
-#nav_logo img{
-       height: 45px;
-}
-
 #nav_addVehicle {
        display: flex;
        align-items: center;
@@ -210,8 +206,6 @@ nav>div :hover {
        display: block;
 }
 
-#cart_icon {}
-
 
 @media screen and (max-width: 768px) {
        #nav_addVehicle {
@@ -226,8 +220,7 @@ nav>div :hover {
               width: 25%;
        }
 
-       /* .dropdown: */
-       /* .dropdown: .dropdown-content {
-              display: block;
-       } */
+       #nav_logo img {
+              width: 100px;
+       }
 }
