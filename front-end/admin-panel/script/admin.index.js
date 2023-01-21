@@ -1,3 +1,5 @@
+let baseUrl = "https://vast-rose-jellyfish-wrap.cyclic.app";
+
 // admin container
 let login_div = document.querySelector("#login");
 let admin_container = document.querySelector(".admin_container");
@@ -25,21 +27,21 @@ add_product_btn.addEventListener("click", () => {
 })
 
 // diplay customer details
-get_costumer.addEventListener("click", ()=>{
+get_costumer.addEventListener("click", () => {
        user_data_table.style.display = "block";
        products.style.display = "none";
        order_details_table.style.display = "none";
 })
 
 // display products 
-get_products_by_category.addEventListener("click", ()=>{
+get_products_by_category.addEventListener("click", () => {
        user_data_table.style.display = "none";
        products.style.display = "block";
        order_details_table.style.display = "none";
 })
 
 // display orders
-get_order.addEventListener("click", () =>{
+get_order.addEventListener("click", () => {
        order_details_table.style.display = "block";
        user_data_table.style.display = "none";
        products.style.display = "none";
@@ -55,10 +57,10 @@ show_data("all");
 async function show_data(category) {
        let request;
        if (category == "all") {
-              request = await fetch(`http://localhost:8080/product/`);
+              request = await fetch(`${baseUrl}/product/`);
        }
        else {
-              request = await fetch(`http://localhost:8080/product?q=${category}`);
+              request = await fetch(`${baseUrl}/product?q=${category}`);
        }
        let data = await request.json();
        console.log(data)
@@ -144,7 +146,7 @@ async function show_data(category) {
 async function updateRequest(id, obj) {
        try {
 
-              let toggle_request = await fetch(`http://localhost:8080/product/update/${id}`, {
+              let toggle_request = await fetch(`${baseUrl}/product/update/${id}`, {
                      method: "PATCH",
                      headers: {
                             "Content-Type": "application/json",
@@ -223,7 +225,7 @@ async function post_product(event) {
               img_src: image,
        }
 
-       let request = fetch(`http://localhost:8080/product/add`, {
+       let request = fetch(`${baseUrl}/product/add`, {
               method: "POST",
               headers: {
                      "Content-Type": "application/json"
@@ -240,7 +242,7 @@ async function post_product(event) {
 // handling Delete Button
 async function handleDelete(id) {
 
-       let request = await fetch(`http://localhost:8080/product/delete/${id}`, {
+       let request = await fetch(`${baseUrl}/product/delete/${id}`, {
               method: "DELETE",
               headers: {
                      "Content-Type": "application/json"
@@ -262,7 +264,7 @@ async function products_category() {
 
 
 // get customers------------------------------------------------------------
-let baseUrl = "http://localhost:8080";
+// let baseUrl = "${baseUrl}";
 
 
 function show_searched_data() {
