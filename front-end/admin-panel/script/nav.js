@@ -12,7 +12,7 @@ function closeNav() {
 let nav_signin = document.getElementById("nav_signin");
 let nav_signin2 = document.getElementById("nav_signin2");
 let nav_signup = document.getElementById("nav_signup");
-let uname = localStorage.getItem("username");
+let uname = localStorage.getItem("name");
 let cartText = document.getElementById("cart_text");
 let dropdown_content = document.getElementById("dropdown-content");
 let cartValue = JSON.parse(localStorage.getItem("totalPrice"));
