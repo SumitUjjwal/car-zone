@@ -12,7 +12,7 @@ footer {
 }
 
 .sec_1>div {
-       padding: 60px;
+       padding: 10%;
 }
 
 .sec_1>div:hover {
@@ -226,7 +226,7 @@ footer {
 
 }
 
-/* @media all and (min-width: 1324px) and (max-width: 1524px) {
+@media all and (min-width: 1324px) and (max-width: 1524px) {
     #footer_form {
         width: 35%;
     }
@@ -253,9 +253,13 @@ footer {
     }
 }
 
-@media all and (min-width: 320px) and (max-width: 867px) {
+@media all and (min-width: 220px) and (max-width: 867px) {
     .sec_1 {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sec_2{
+       flex-direction: column;
     }
 
     #footer_form {
@@ -277,4 +281,8 @@ footer {
     #footer_form>input {
         margin-top: 15px;
     }
-} */
+
+    #footer_feedback{
+       display: none;
+    }
+}
