@@ -69,12 +69,14 @@ Car Zone is an e-commerce website for auto parts and accessories
 
 ##body for adding new product
 ```
-       img_src: String,
-       title: String,
-       model: String,
-       sku: Number,
-       fulfillment: String,
-       price: Number,
-       discount: Number,
-       prevPrice: Number
+       {
+              img_src: String,
+              title: String,
+              model: String,
+              sku: Number,
+              fulfillment: String,
+              price: Number,
+              discount: Number,
+              prevPrice: Number
+       }
 ```
