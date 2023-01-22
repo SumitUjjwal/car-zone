@@ -16,28 +16,6 @@ async function fetchBySearch(val) {
 }
 let product = document.querySelector(".right_section");
 
-// ---------------------------------------------------------------
-// console.log(seachValueFromHome)
-// let cartArr = JSON.parse(localStorage.getItem('cartItems')) || [];
-// fetchBySearch(seachValueFromHome)
-
-// let api = "http://localhost:8080/product/";
-
-// async function getProduct() {
-//     await fetch("http://localhost:8080/product")
-//         .then((res) => res.json())
-//         .then((data) => {
-//             console.log(data)
-//             renderData(data)
-//         })
-// }
-
-// getProduct()
-
-// let product = document.querySelector(".right_section");
-
-//-----------------------------------------------------------------------------------------------
-
 function renderData(data) {
        product.innerHTML = data.map(item => {
 
