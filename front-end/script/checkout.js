@@ -1,81 +1,22 @@
 let baseUrl = "https://vast-rose-jellyfish-wrap.cyclic.app"
 let img_src = sessionStorage.getItem("img_src");
 let title = sessionStorage.getItem("title");
-// let price = JSON.parse(localStorage.getItem('dp'))
-// let original_price = JSON.parse(localStorage.getItem('op'))
-// let tax = (((+price) / 100) * 18).toFixed(2);
-// let total_price = (+price + +tax).toFixed(2);
-// let saved_price = (+original_price - +price).toFixed(2);
-// let qty = sessionStorage.getItem("qty");
-
-// let price = (total_price-tax).toFixed(2);
 
 let item_details = document.getElementById("item_details");
 let right_item_details = document.getElementById("right_item_details");
 let right_checkout_price = document.getElementById("right_checkout_price");
 let address_subm_btn = document.getElementById("address_subm");
 let form = document.getElementById("add_form");
-// let address = document.getElementById("userAddress");
 let saving = document.getElementById("saving");
 
 let user_address = document.getElementById("userAddress");
-// console.log(userDetails)
-
-
-// setting details on DOM
-// item_details.innerHTML = 
-// `
-//        <img class="product_image"
-//               src="${img_src}"
-//               alt="">
-//        <p class="product_title">${title}</p>
-// `;
-
-// right_item_details.innerHTML = 
-// `
-//       <img src="${img_src}"
-//               alt="">
-//        <p id="title">${title}</p>
-//        <div>
-//               <p id="price">$${price}</p>
-//               <p>Qty 1</p>
-//               <a href="">Remove</a>
-//        </div> 
-// `;
-
-// right_checkout_price.innerHTML = 
-// `
-//       <div class="right_checkout_price_box">
-//               <p>Item Subtotal</p>
-//               <p>$${price}</p>
-//        </div>
-//        <div class="right_checkout_price_box">
-//               <p>Shipping</p>
-//               <p>FREE</p>
-//        </div>
-//        <div class="right_checkout_price_box">
-//               <p>Estimated Sales Tax</p>
-//               <p>$${tax}</p>
-//        </div>
-//        <p>You're saving $200 on your order today!</p>
-//        <div class="right_checkout_price_box">
-//               <h2>Total</h2>
-//               <h2>$${total_price}</h2>
-//        </div> 
-// `
-
-
-
-
 
 // render products
 
 async function cardItems(id) {
        let category = localStorage.getItem("searchVal");
-       // console.log(category)
        let request = await fetch(`${baseUrl}/product?_id=${id}`);
        let data = await request.json();
-       // console.log(data)
        return data;
 
 }
@@ -141,14 +82,7 @@ async function renderCards() {
 // calculating price
 
 let combPrice = JSON.parse(localStorage.getItem('combPrice'));
-// console.log('combPrice', combPrice)
 let tax = (((combPrice) / 100) * 18).toFixed(2);
-
-// originalPriceInput.innerText = `$${(combPrice * 1.5).toFixed(2)}`;
-// discountedPriceInput.innerText = `$${combPrice.toFixed(2)}`;
-// taxPriceInput.innerText = `$${tax}`
-// totalPriceInput.innerText = `$${(+combPrice + +tax).toFixed(2)}`;
-// localStorage.setItem("totalPrice", JSON.stringify(totalPriceInput.innerText));
 
 let checkout_price = document.getElementById("checkout_price");
 let checkout_tax = document.getElementById("checkout_tax");

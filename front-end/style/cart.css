@@ -1,12 +1,4 @@
-/* * {
-       margin: 0;
-       padding: 0;
-       font-family: "Roboto", sans-serif;
-}
 
-.top_nav_container {
-       padding: 15px;
-} */
 
 /* main container */
 #cart_main_container {
@@ -74,14 +66,7 @@
        width: 50%;
 }
 
-.item_detail_image {
-       /* width: 30%; */
-}
-
 .item_detail img {
-       /* width: 10%; */
-       /* width: 100px; */
-       /* height: 10%; */
        height: 150px;
 }
 

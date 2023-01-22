@@ -1,9 +1,6 @@
 let baseUrl = "https://vast-rose-jellyfish-wrap.cyclic.app";
 
 let login = document.getElementById("loginBtn").addEventListener("click", userLogin);
-// let nav_signin = document.getElementById("nav_signin");
-// let nav_signin2 = document.getElementById("nav_signin2");
-// let nav_signup = document.getElementById("nav_signup");
 
 async function userLogin(event) {
        event.preventDefault();
@@ -41,21 +38,3 @@ async function userLogin(event) {
                      })
        }
 }
-
-// let uname = localStorage.getItem("username");
-
-// if(uname){
-//        nav_signin.innerText = uname;
-//        nav_signin.setAttribute("href", "#");
-//        nav_signin.innerText = "My Account";
-//        nav_signup.innerText = "Log Out";
-// }
-
-// if(nav_login.innerText == "Log Out"){
-//        nav_login.addEventListener("click", function(){
-//               localStorage.clear();
-//               alert("User logged out")
-//               nav_signup.innerText = "Sign Up";
-//               nav_login.innerText = "Log In";
-//        })
-// }
