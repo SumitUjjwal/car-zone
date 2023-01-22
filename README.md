@@ -34,7 +34,7 @@ Car Zone is an e-commerce website for auto parts and accessories
 
 ## screenshot :
 
-![](./front-end/resources/screencapture-project-car-zone-netlify-app-index-html-2023-01-22-20_55_26.png)
+![](https://github.com/SumitUjjwal/utopian-cover-8281/blob/day-5/front-end/resources/screencapture-project-car-zone-netlify-app-index-html-2023-01-22-20_55_26.png)
 
 # API Endpoints
 ## baseUrl :
