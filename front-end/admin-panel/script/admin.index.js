@@ -149,17 +149,10 @@ async function updateRequest(id, obj) {
               let toggle_request = await fetch(`${baseUrl}/product/update/${id}`, {
                      method: "PATCH",
                      headers: {
-                            "Content-Type": "application/json",
-                            // Authorization: `Bearer ${sessionStorage.getItem("access_token")}`
+                            "Content-Type": "application/json"
                      },
                      body: JSON.stringify(obj)
               })
-
-
-              // if (toggle_request.ok) {
-              //        let data_per_page = document.querySelector(".select-tag").value;
-              //        // FetchTodoData(data_per_page);
-              // }
               alert("Product Updated successfully");
               window.location.reload();
        }
@@ -170,38 +163,7 @@ async function updateRequest(id, obj) {
 }
 
 
-// }
 
-
-// ---------------------------------------------------------------------------------
-
-// function RenderData(all_datas) {
-//        let mainContainer = document.querySelector(".data-list-wrapper");
-//        mainContainer.innerHTML = "";
-
-//        let new_formed_data = all_datas.map((item) => {
-//               return `<div class="task">
-//         <div class="content">
-//             <input
-//                 type="text"
-//                 class="text"
-//                 value="${item.title}"
-//                 readonly>
-//         </div>
-//         <div class="actions">
-//             <button class="toggle" data-id=${item.id} data-completed=${item.completed
-//                      }>
-//                    ${item.completed === true ? "Completed" : "Not completed"}
-//             </button>
-//             <button class="edit" data-id=${item.id} >Edit</button>
-//             <button class="delete" data-id=${item.id} >Delete</button>
-//         </div>
-//     </div>`;
-//        });
-
-//        mainContainer.innerHTML = new_formed_data.join(" ");
-
-// ---------------------------------------------------------------------------------
 
 // Adding event listener to add product form
 add_product.addEventListener("submit", post_product);
