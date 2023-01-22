@@ -38,7 +38,7 @@ if(uname){
 if (uname) {
        nav_signup.addEventListener("click", function () {
               localStorage.clear();
-              alert("User logged out")
+              alert("Admin logged out")
               nav_signup.innerText = "Create Account";
               nav_signin.innerText = "Sign In";
               nav_signin2.innerText = "Sign In";
