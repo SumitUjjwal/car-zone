@@ -37,18 +37,18 @@ Car Zone is an e-commerce website for auto parts and accessories
 ![](./front-end/resources/screencapture-project-car-zone-netlify-app-index-html-2023-01-22-20_55_26.png)
 
 # API Endpoints
-##baseUrl :
+#baseUrl :
 ```
        https://vast-rose-jellyfish-wrap.cyclic.app
 ```
 
-##User
+#User
 ```
        login -> POST `${baseUrl}/user/login`
        register -> POST `${baseUrl}/user/register`
 ```
 
-##product
+#product
 ```
        create -> POST `${baseUrl}/product/create`
        read -> GET `${baseUrl}/product/`
@@ -59,7 +59,7 @@ Car Zone is an e-commerce website for auto parts and accessories
        delete -> DELETE `${baseUrl}/product/delete/:id`
 ```
 
-##orders
+#orders
 ```
        create -> POST `${baseUrl}/order/add`
        read -> GET `${baseUrl}/order/`
@@ -67,7 +67,7 @@ Car Zone is an e-commerce website for auto parts and accessories
        update -> PATCH `${baseUrl}/product/update/:id`
 ```
 
-##body for adding new product
+#body for adding new product
 ```
        {
               img_src: String,
