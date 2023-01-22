@@ -1,7 +1,7 @@
 # CAR-ZONE
 Car Zone is an e-commerce website for auto parts and accessories
 
-## Directory structure :
+## directory structure :
 ```
 .
 ├── back-end
@@ -32,7 +32,7 @@ Car Zone is an e-commerce website for auto parts and accessories
     └── style.css
 ```
 
-## Screenshot :
+## screenshot :
 
 ![](./front-end/resources/screencapture-project-car-zone-netlify-app-index-html-2023-01-22-20_55_26.png)
 
