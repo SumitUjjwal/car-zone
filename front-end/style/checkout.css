@@ -231,43 +231,6 @@
        border-bottom: 1px solid #000000;
 }
 
-/* .right_checkout_shipping>div {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
-       gap: 10px;
-       padding: 20px 0px 20px;
-}
-
-.right_checkout_shipping>div {
-       font-size: 13px;
-}
-
-.right_checkout_shipping>div #price {
-       font-weight: 600;
-}
-
-.right_checkout_shipping>div a {
-       text-decoration: none;
-       color: #bb0628;
-}
-
-.right_checkout_shipping>div img {
-       width: 80px;
-}
-
-.right_checkout_shipping {
-       border-bottom: 1px solid grey;
-}
-
-.right_checkout_digital h3 {
-       padding: 0px 0px 15px;
-}
-
-.right_checkout_digital {
-       border-bottom: 1px solid grey;
-} */
-
 .right_checkout_price_box {
        display: flex;
        justify-content: space-between;
