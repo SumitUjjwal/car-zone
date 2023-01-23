@@ -1,6 +1,6 @@
 # CAR-ZONE
 Car Zone is an e-commerce website for auto parts and accessories.
-Deployed at: [CarZone](https://project-car-zone.netlify.app/)
+Deployed link: [CarZone](https://project-car-zone.netlify.app/)
 
 ## directory structure :
 ```
