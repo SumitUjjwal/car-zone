@@ -29,8 +29,7 @@ Deployed link: [CarZone](https://project-car-zone.netlify.app/)
 │   └── script
 │   └── style
 │   └── index.html
-└── styles
-    └── style.css
+└── README.md
 ```
 
 ## screenshot :
