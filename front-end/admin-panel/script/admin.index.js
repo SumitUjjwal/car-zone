@@ -136,7 +136,7 @@ async function show_data(category) {
                             }
 
                             console.log(updated_obj)
-                            // updateRequest(item_id, updated_obj);
+                            updateRequest(item_id, updated_obj);
                      }
               });
        }
