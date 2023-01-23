@@ -32,6 +32,9 @@ async function userRegistration(event) {
                             window.location.href = "./signin.html";
                      })
        }
+       else if(password.length < 8){
+              alert("Password must be at least 8 characters");
+       }
        else{
               alert("Password mismatch");
        }
