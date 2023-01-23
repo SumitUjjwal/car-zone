@@ -18,17 +18,22 @@ async function userRegistration(event) {
               firstName, lastName, location, zipCode, phone, email, password, confirmPassword
        };
 
-       let register_request = await fetch(`${baseUrl}/user/register`, {
-              method: "POST",
-              headers: {
-                     "Content-Type": "application/json",
-              },
-              body: JSON.stringify(userObj)
-       }).then((res) => res.json())
-              .then((data) => {
-                     console.log(data);
-                     alert(data.msg);
-                     window.location.href = "./signin.html";
-              })
+       if(password == confirmPassword){
+              let register_request = await fetch(`${baseUrl}/user/register`, {
+                     method: "POST",
+                     headers: {
+                            "Content-Type": "application/json",
+                     },
+                     body: JSON.stringify(userObj)
+              }).then((res) => res.json())
+                     .then((data) => {
+                            console.log(data);
+                            alert(data.msg);
+                            window.location.href = "./signin.html";
+                     })
+       }
+       else{
+              alert("Password mismatch");
+       }
 }
 
