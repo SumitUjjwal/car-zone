@@ -41,7 +41,7 @@ Deployed link: [CarZone](https://project-car-zone.netlify.app/)
        https://vast-rose-jellyfish-wrap.cyclic.app
 ```
 
-## User :
+## user :
 ```
        login -> POST `${baseUrl}/user/login`
        register -> POST `${baseUrl}/user/register`
