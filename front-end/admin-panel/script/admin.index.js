@@ -78,7 +78,7 @@ async function show_data(category) {
                                           <span>Model: </span><input type="text" id="model" value="${element.model}" readonly>
                                           <span>SKU-Value: </span><input type="text" id="sku" value="${element.sku}" readonly>
                                    </div>
-                                   <input type="text" id="price" value="$${element.price}" readonly>
+                                   <span>$<input type="text" id="price" value="${element.price}" readonly></span>
                                    <input type="text" id="descr" value="Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet optio neque cumque vero ullam dolor quo ad nulla repellat. Ad odit reprehenderit accusamus optio cupiditate in inventore nesciunt vel error.">
                                    <div class="product_btns">
                                           <input type="text" class="yl_btn product_btn" id="${element._id}" value="Remove" readonly>
@@ -100,7 +100,7 @@ async function show_data(category) {
        });
 
        for (let btn of updateBtnArr) {
-              btn.addEventListener("click", (event) => {
+              btn.addEventListener("click", async (event) => {
                      event.preventDefault();
                      let item_id = event.target.id;
                      let title_input = document.getElementById("title");
@@ -135,7 +135,7 @@ async function show_data(category) {
                                    price: price_input.value
                             }
 
-                            console.log(updated_obj)
+                            console.log(item_id, updated_obj)
                             updateRequest(item_id, updated_obj);
                      }
               });
@@ -146,7 +146,7 @@ async function show_data(category) {
 async function updateRequest(id, obj) {
        try {
 
-              let toggle_request = await fetch(`${baseUrl}/product/update/${id}`, {
+              let request = await fetch(`${baseUrl}/product/update/${id}`, {
                      method: "PATCH",
                      headers: {
                             "Content-Type": "application/json"
@@ -161,8 +161,6 @@ async function updateRequest(id, obj) {
               alert("You are not allowed to update it.");
        }
 }
-
-
 
 
 // Adding event listener to add product form
