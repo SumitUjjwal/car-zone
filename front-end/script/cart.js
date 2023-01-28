@@ -21,7 +21,7 @@ async function cardItems(id) {
        let request = await fetch(`${url}/product?_id=${id}`);
        let data = await request.json();
        return data;
-       
+
 }
 
 
@@ -30,12 +30,6 @@ let LSid = JSON.parse(localStorage.getItem('cartItem')) || [];
 renderCards()
 let lsPrice = 0;
 function getAsCard(item) {
-       console.log(item)
-       console.log(item[0].img_src)
-
-       let obj = {};
-
-
        let items = document.createElement('div');
        items.setAttribute("class", "items");
 
@@ -85,6 +79,17 @@ function getAsCard(item) {
        item_action_remove = document.createElement('button');
        item_action_remove.setAttribute("class", "item_action_remove");
        item_action_remove.innerText = "Remove";
+       item_action_remove.addEventListener("click", async () => {
+              let request = await fetch(`${url}/product/delete/${item[0]._id}`, {
+                     method: "DELETE",
+                     headers: {
+                            "Content-Type": "application/json"
+                     }
+              })
+
+              alert("Product Deleted Successfully");
+              window.location.reload();
+       })
 
        item_action.append(item_action_quantity, item_action_remove);
 
@@ -124,7 +129,7 @@ function updateOrderSummary(originalPrice, discountPrice) {
        console.log('combPrice', combPrice)
        let tax = (((combPrice) / 100) * 18).toFixed(2);
 
-       originalPriceInput.innerText = `$${(combPrice*1.5).toFixed(2)}`;
+       originalPriceInput.innerText = `$${(combPrice * 1.5).toFixed(2)}`;
        discountedPriceInput.innerText = `$${combPrice.toFixed(2)}`;
        taxPriceInput.innerText = `$${tax}`
        totalPriceInput.innerText = `$${(+combPrice + +tax).toFixed(2)}`;
@@ -133,10 +138,10 @@ function updateOrderSummary(originalPrice, discountPrice) {
 
 
 checkout_btn.addEventListener("click", async () => {
-       if(uname){
+       if (uname) {
               window.location.href = "./checkout.html";
        }
-       else{
+       else {
               alert("Please Sign In");
               window.location.href = "./signin.html";
        }
