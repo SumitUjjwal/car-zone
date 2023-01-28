@@ -74,9 +74,10 @@ productRouter.patch("/update/:id", async (req, res) => {
               res.json({ "msg": "Product updated successfully" });
        } catch (error) {
               console.log(error);
-              res.status(500).json({ "msg": "Something went wrong" });
+              res.json({ "msg": error });
        }
 })
+
 
 productRouter.delete("/delete/:id", async (req, res) => {
        const id = req.params.id;
