@@ -74,7 +74,7 @@ productRouter.patch("/update/:id", async (req, res) => {
               res.json({ "msg": "Product updated successfully" });
        } catch (error) {
               console.log(error);
-              res.json({ "msg": error });
+              res.json({ "msg": "error" });
        }
 })
 
@@ -90,28 +90,6 @@ productRouter.delete("/delete/:id", async (req, res) => {
        }
 })
 
-productRouter.patch("/update/:id", async (req, res) => {
-       const id = req.params.id;
-       const updateProduct = req.body;
-       try {
-              await ProductModel.findByIdAndUpdate({ _id: id }, updateProduct);
-              res.json({ "msg": "Product Updated Successfully", "product": updateProduct });
-       } catch (error) {
-              console.log(error.message);
-              res.json({ "msg": "Product Updated Failed" })
-       }
-})
-
-productRouter.delete("/delete/:id", async (req, res) => {
-       const id = req.params.id;
-       try {
-              await ProductModel.findByIdAndDelete({ _id: id });
-              res.json({ "msg": "Product Deleted Successfully" });
-       } catch (error) {
-              console.log(error.message);
-              res.json({ "msg": "Product Deletion Failed" })
-       }
-})
 
 module.exports = {
        productRouter
