@@ -32,9 +32,6 @@ Deployed link: [CarZone](https://project-car-zone.netlify.app/)
 └── README.md
 ```
 
-## screenshot :
-![alt homepage](https://i.imgur.com/wBGStuv.png)
-
 # API Endpoints
 ## baseUrl :
 ```
@@ -79,3 +76,8 @@ Deployed link: [CarZone](https://project-car-zone.netlify.app/)
               prevPrice: Number
        }
 ```
+
+
+## screenshot :
+![alt homepage](https://i.imgur.com/wBGStuv.png)
+
